@@ -1,0 +1,115 @@
+@import "common";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $BG_COLOR;
+}
+
+body {
+    @include flex-center;
+    font-family: "Roboto" !important;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    
+    .wrapper {
+      @include flex-center;
+      flex-direction: column;
+      width: 27rem;
+      height: 47.375rem;
+      border: 5px solid $MAIN_BLUE;
+  
+      header.title {
+        position: relative;
+  
+        p {
+          display: inline;
+          background-color: $MAIN_BLUE;
+          padding: 2px 8px 2px 8px;
+          color: #FFFFFF;
+          font-size: 20px;
+        }
+  
+        h1 {
+          font-size: 60px;
+          font-weight: 700;
+          padding-top: 8px;
+          color: #FFFFFF;
+          -webkit-text-stroke: 1px #000000;
+          text-shadow: 4px 4px 0px $MAIN_BLUE;
+        }
+
+        >svg.memphis {
+            position: absolute;
+            top: -10px;
+            left: 180px;
+            z-index: -1;
+        }
+        
+        svg.round {
+          position: absolute;
+          top: 90px;
+          left: 0px;
+          z-index: -1;
+        }
+      }
+  
+      div.slide_wrapper {
+        padding: 34px;
+        position: relative;
+        
+        svg {
+          position: absolute;
+          z-index: -1;
+          left: 17px;
+          top: 10px;
+        }
+        article.slider {
+          @include flex-center;
+          position: relative;
+          flex-direction: column;
+          width: 180px;
+          height: 180px;
+          border: 5px solid $MAIN_BLUE;
+          border-radius: 10px;
+          background-color: #FFFFFF;
+          box-shadow: 0px 4px 4px $SHADOW_COLOR;
+          overflow: hidden;
+
+          ul {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+
+            img {
+                width: 180px;
+                height: auto;
+              }
+          }
+        }
+      }
+  
+      div.option {
+        position: relative;
+        @include flex-center;
+        flex-direction: column;
+  
+        @import "button";
+      }
+
+      p.hashtag {
+        padding-top: 10px;
+        font-size: 12px;
+      }
+
+      svg {
+        position: absolute;
+        top: 67px;
+        z-index: -1;
+      }
+    }
+  }
+  

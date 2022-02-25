@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+$MAIN_BLUE: #0E4A84;
+$MAIN_YELLOW: #FFB800;
+$BG_COLOR: #FFFFFF;
+$SHADOW_COLOR: #C4C4C4;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  @include flex-center;
+  font-family: "Roboto" !important;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  
+  .wrapper {
+    @include flex-center;
+    flex-direction: column;
+    width: 432px;
+    height: 758px;
+    border: 5px solid $MAIN_BLUE;
+
+    header.title {
+      position: relative;
+
+      p {
+        display: inline;
+        background-color: $MAIN_BLUE;
+        padding: 2px 8px 2px 8px;
+        color: #FFFFFF;
+        font-size: 20px;
+      }
+
+      h1 {
+        font-size: 60px;
+        font-weight: 700;
+        padding-top: 8px;
+        color: #FFFFFF;
+        -webkit-text-stroke: 1px #000000;
+        text-shadow: 4px 4px 0px $MAIN_BLUE;
+      }
+
+      svg {
+        position: absolute;
+        top: 90px;
+        left: 0px;
+        z-index: -1;
+      }
+    }
+
+    div.slide_wrapper {
+      padding: 34px;
+      position: relative;
+      
+      svg {
+        position: absolute;
+        z-index: -1;
+        left: 17px;
+        top: 10px;
+      }
+      article.slider {
+        @include flex-center;
+        position: relative;
+        flex-direction: column;
+        width: 180px;
+        height: 180px;
+        border: 5px solid $MAIN_BLUE;
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        box-shadow: 0px 4px 4px $SHADOW_COLOR;
+  
+        img {
+          width: 160px;
+          height: auto;
+        }
+  
+        div.slider_spot {
+          @include flex-center;
+          position: absolute;
+          top: 160px;
+
+          div.spot {
+            width: 4px;
+            height: 4px;
+            border-radius: 3px;
+            background-color: $SHADOW_COLOR;
+            margin: 0px 4px 0px 4px;
+          }
+
+          div.spot.tg {
+            width: 6px;
+            height: 6px;
+            border-radius: 3px;
+            background-color: $MAIN_BLUE;
+            margin: 0px 4px 0px 4px;
+          }
+        }
+      }
+    }
+
+    div.option {
+      @include flex-center;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      flex-direction: column;
+
+      @import "button";
+    }
+
+  }
+}
+
+
+
+
+        // border: none;
+        // outline: none;
+        // background-color: $MAIN_BLUE;
+        // width: 200px;
+        // height: 45px;
+        // border-radius: 25px;
+        // font-family: "Roboto";
+        // font-weight: 700;
+        // color: #FFFFFF;
+
+        // &:hover {
+        //   //background-color: lighten($MAIN_BLUE, 10%);
+          
+        // }
