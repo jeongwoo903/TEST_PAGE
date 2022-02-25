@@ -20,8 +20,12 @@ body {
       @include flex-center;
       flex-direction: column;
       width: 27rem;
-      height: 47.375rem;
+      height: 98.7vh;
       border: 5px solid $MAIN_BLUE;
+
+      @media (min-width: 800px) {
+        width: 758px;
+      }
   
       header.title {
         position: relative;

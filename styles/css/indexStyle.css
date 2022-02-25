@@ -1,272 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: "Roboto" !important;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-body .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 432px;
-  height: 758px;
-  border: 5px solid #0E4A84;
-}
-
-body .wrapper header.title {
-  position: relative;
-}
-
-body .wrapper header.title p {
-  display: inline;
-  background-color: #0E4A84;
-  padding: 2px 8px 2px 8px;
-  color: #FFFFFF;
-  font-size: 20px;
-}
-
-body .wrapper header.title h1 {
-  font-size: 60px;
-  font-weight: 700;
-  padding-top: 8px;
-  color: #FFFFFF;
-  -webkit-text-stroke: 1px #000000;
-  text-shadow: 4px 4px 0px #0E4A84;
-}
-
-body .wrapper header.title svg {
-  position: absolute;
-  top: 90px;
-  left: 0px;
-  z-index: -1;
-}
-
-body .wrapper div.slide_wrapper {
-  padding: 34px;
-  position: relative;
-}
-
-body .wrapper div.slide_wrapper svg {
-  position: absolute;
-  z-index: -1;
-  left: 17px;
-  top: 10px;
-}
-
-body .wrapper div.slide_wrapper article.slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 180px;
-  height: 180px;
-  border: 5px solid #0E4A84;
-  border-radius: 10px;
-  background-color: #FFFFFF;
-  -webkit-box-shadow: 0px 4px 4px #C4C4C4;
-          box-shadow: 0px 4px 4px #C4C4C4;
-}
-
-body .wrapper div.slide_wrapper article.slider img {
-  width: 160px;
-  height: auto;
-}
-
-body .wrapper div.slide_wrapper article.slider div.slider_spot {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 160px;
-}
-
-body .wrapper div.slide_wrapper article.slider div.slider_spot div.spot {
-  width: 4px;
-  height: 4px;
-  border-radius: 3px;
-  background-color: #C4C4C4;
-  margin: 0px 4px 0px 4px;
-}
-
-body .wrapper div.slide_wrapper article.slider div.slider_spot div.spot.tg {
-  width: 6px;
-  height: 6px;
-  border-radius: 3px;
-  background-color: #0E4A84;
-  margin: 0px 4px 0px 4px;
-}
-
-body .wrapper div.option {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-body .wrapper div.option button.btn {
-  --duration: .5s;
-  --move-hover: -4px;
-  --shadow: 0 2px 4px -1px rgba(19, 100, 178, 0.4);
-  --shadow-hover: 0 4px 10px -2px rgba(19, 100, 178, 0.8);
-  padding: 16px 32px;
-  font-family: 'Roboto';
-  font-weight: 500;
-  line-height: 16px;
-  border-radius: 24px;
-  display: block;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 16px;
-  letter-spacing: .5px;
-  background: #0E4A84;
-  color: #FFFFFF;
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
-  -webkit-transform: translateY(var(--y));
-          transform: translateY(var(--y));
-  -webkit-transition: -webkit-transform var(--duration) ease, -webkit-box-shadow var(--duration) ease;
-  transition: -webkit-transform var(--duration) ease, -webkit-box-shadow var(--duration) ease;
-  transition: transform var(--duration) ease, box-shadow var(--duration) ease;
-  transition: transform var(--duration) ease, box-shadow var(--duration) ease, -webkit-transform var(--duration) ease, -webkit-box-shadow var(--duration) ease;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-appearance: none;
-}
-
-body .wrapper div.option button.btn div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .wrapper div.option button.btn div span {
-  display: block;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  font-style: normal;
-}
-
-body .wrapper div.option button.btn div span:nth-child(1) {
-  --d: 0.05s;
-}
-
-body .wrapper div.option button.btn div span:nth-child(2) {
-  --d: 0.1s;
-}
-
-body .wrapper div.option button.btn div span:nth-child(3) {
-  --d: 0.15s;
-}
-
-body .wrapper div.option button.btn div span:nth-child(4) {
-  --d: 0.2s;
-}
-
-body .wrapper div.option button.btn div span:nth-child(5) {
-  --d: 0.25s;
-}
-
-body .wrapper div.option button.btn div span:nth-child(6) {
-  --d: 0.3s;
-}
-
-body .wrapper div.option button.btn div span:nth-child(7) {
-  --d: 0.35s;
-}
-
-body .wrapper div.option button.btn div span:nth-child(8) {
-  --d: 0.4s;
-}
-
-body .wrapper div.option button.btn div span:nth-child(9) {
-  --d: 0.45s;
-}
-
-body .wrapper div.option button.btn div span:nth-child(10) {
-  --d: 0.5s;
-}
-
-body .wrapper div.option button.btn div span:nth-child(11) {
-  --d: 0.55s;
-}
-
-body .wrapper div.option button.btn:hover {
-  --y: var(--move-hover);
-  --shadow: var(--shadow-hover);
-  --move: -4px;
-  --shadow-active: 0 3px 1px rgba(0, 0, 0, .5);
-}
-
-body .wrapper div.option button.btn:hover span {
-  -webkit-animation: move var(--duration) linear var(--d);
-          animation: move var(--duration) linear var(--d);
-}
-
-@-webkit-keyframes move {
-  40% {
-    -webkit-transform: translateY(var(--move));
-            transform: translateY(var(--move));
-    text-shadow: var(--shadow-active);
-  }
-}
-
-@keyframes move {
-  40% {
-    -webkit-transform: translateY(var(--move));
-            transform: translateY(var(--move));
-    text-shadow: var(--shadow-active);
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -307,8 +39,14 @@ body .wrapper {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 27rem;
-  height: 47.375rem;
+  height: 98.7vh;
   border: 5px solid #0E4A84;
+}
+
+@media (min-height: 800px) {
+  body .wrapper {
+    height: 758px;
+  }
 }
 
 body .wrapper header.title {
@@ -386,7 +124,8 @@ body .wrapper div.slide_wrapper article.slider {
 body .wrapper div.slide_wrapper article.slider ul {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
 }
 
 body .wrapper div.slide_wrapper article.slider ul img {
@@ -509,6 +248,14 @@ body .wrapper div.option button.btn:hover {
 body .wrapper div.option button.btn:hover span {
   -webkit-animation: move var(--duration) linear var(--d);
           animation: move var(--duration) linear var(--d);
+}
+
+@-webkit-keyframes move {
+  40% {
+    -webkit-transform: translateY(var(--move));
+            transform: translateY(var(--move));
+    text-shadow: var(--shadow-active);
+  }
 }
 
 @keyframes move {
