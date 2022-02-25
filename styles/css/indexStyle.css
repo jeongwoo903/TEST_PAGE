@@ -39,7 +39,7 @@ body .wrapper {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 27rem;
-  height: 99vh;
+  height: 100vh;
   border: 5px solid #0E4A84;
 }
 
