@@ -1,0 +1,99 @@
+@import "common";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $BG_COLOR;
+}
+
+body {
+    @include flex-center;
+    font-family: "Roboto" !important;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 27rem;
+        height: 98.8vh;
+        border: 5px solid $MAIN_BLUE;
+
+      @media (min-height: 800px) {
+        height: 758px;
+      }
+
+      header#banner {
+        display: flex;
+        width: 100%;
+        min-height: 60px;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: 0px 2px 0px $SHADOW_COLOR;
+
+        p {
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+      }
+
+      div.content_wrapper {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        
+        div.img_wrapper {
+            width: 300px;
+            min-height: 300px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 4px $SHADOW_COLOR;
+          }
+
+          div.discription {
+              height: 12.5rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              >p {
+                  margin-top: 30px;
+                  text-align: center;
+                  width: 220px;
+                  font-size: 1.2rem;
+                  font-weight: 700;
+              }
+              div.button_wrapper {
+                  display: grid;
+                  grid-template-rows: 1fr 1fr;
+
+                  button {
+                      margin-top: 20px;
+                      border: none;
+                      outline: none;
+                      background-color: $MAIN_BLUE;
+                      width: 200px;
+                      height: 45px;
+                      border-radius: 25px;
+                      font-family: "Roboto";
+                      font-weight: 700;
+                      color: #FFFFFF;
+                      
+                      &:hover {
+                          background-color: lighten($MAIN_BLUE, 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

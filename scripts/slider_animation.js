@@ -1,7 +1,9 @@
-const wrapper = document.querySelector("ul");
-console.log(wrapper);
+let pxValue = 0;
+const ulElem = document.querySelector("ul");
+
 setInterval(() => {
-    let firstList = document.querySelector("img:nth-child(1)");
-    let lastList = document.querySelector("img:nth-child(5)");
-    lastList.insertAdjacentElement("afterend", firstList);
-}, 1000);
+    if (pxValue === 720) pxValue -= 720;
+    else pxValue += 180;
+    ulElem.style.transform = `translate(-${pxValue}px)`;
+}, 1500);
+

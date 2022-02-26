@@ -43,6 +43,7 @@ button.btn {
         --shadow: var(--shadow-hover);
         --move: -4px;
         --shadow-active: 0 3px 1px rgba(0, 0, 0, .5);
+        background-color: lighten($MAIN_BLUE, 10%);
         span {
             animation: move var(--duration) linear var(--d);
         }

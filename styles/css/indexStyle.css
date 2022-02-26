@@ -39,7 +39,7 @@ body .wrapper {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 27rem;
-  height: 100vh;
+  height: 98.8vh;
   border: 5px solid #0E4A84;
 }
 
@@ -97,15 +97,6 @@ body .wrapper div.slide_wrapper svg {
 }
 
 body .wrapper div.slide_wrapper article.slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -121,14 +112,16 @@ body .wrapper div.slide_wrapper article.slider {
   overflow: hidden;
 }
 
-body .wrapper div.slide_wrapper article.slider ul {
+body .wrapper div.slide_wrapper article.slider ul.content_wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-body .wrapper div.slide_wrapper article.slider ul img {
+body .wrapper div.slide_wrapper article.slider ul.content_wrapper img {
   width: 180px;
   height: auto;
 }
@@ -243,6 +236,7 @@ body .wrapper div.option button.btn:hover {
   --shadow: var(--shadow-hover);
   --move: -4px;
   --shadow-active: 0 3px 1px rgba(0, 0, 0, .5);
+  background-color: #1364b2;
 }
 
 body .wrapper div.option button.btn:hover span {

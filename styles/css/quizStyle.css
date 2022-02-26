@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Roboto" !important;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 27rem;
+  height: 98.8vh;
+  border: 5px solid #0E4A84;
+}
+
+@media (min-height: 800px) {
+  body .wrapper {
+    height: 758px;
+  }
+}
+
+body .wrapper header#banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-shadow: 0px 2px 0px #C4C4C4;
+          box-shadow: 0px 2px 0px #C4C4C4;
+}
+
+body .wrapper header#banner p {
+  font-size: 14px;
+}
+
+body .wrapper header#banner h1 {
+  font-size: 24px;
+}
+
+body .wrapper div.content_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .wrapper div.content_wrapper div.img_wrapper {
+  width: 300px;
+  min-height: 300px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 4px 4px #C4C4C4;
+          box-shadow: 0px 4px 4px #C4C4C4;
+}
+
+body .wrapper div.content_wrapper div.discription {
+  height: 12.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .wrapper div.content_wrapper div.discription > p {
+  margin-top: 30px;
+  text-align: center;
+  width: 220px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+body .wrapper div.content_wrapper div.discription div.button_wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+}
+
+body .wrapper div.content_wrapper div.discription div.button_wrapper button {
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  background-color: #0E4A84;
+  width: 200px;
+  height: 45px;
+  border-radius: 25px;
+  font-family: "Roboto";
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+body .wrapper div.content_wrapper div.discription div.button_wrapper button:hover {
+  background-color: #1364b2;
+}
+/*# sourceMappingURL=quizStyle.css.map */
