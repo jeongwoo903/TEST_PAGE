@@ -100,7 +100,7 @@ body .wrapper ul.content_wrapper {
 
 body .wrapper ul.content_wrapper .page {
   list-style: none;
-  margin: 99px 66px;
+  padding: 99px 66px;
 }
 
 body .wrapper ul.content_wrapper .page div.img_wrapper {
