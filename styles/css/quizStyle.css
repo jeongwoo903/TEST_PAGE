@@ -62,14 +62,33 @@ body .wrapper header#banner {
       justify-content: space-around;
   -webkit-box-shadow: 0px 2px 0px #C4C4C4;
           box-shadow: 0px 2px 0px #C4C4C4;
+  position: relative;
 }
 
-body .wrapper header#banner p {
+body .wrapper header#banner button {
+  outline: none;
+  border: none;
+  background-color: #FFFFFF;
   font-size: 14px;
 }
 
+body .wrapper header#banner button:hover {
+  color: gray;
+}
+
 body .wrapper header#banner h1 {
-  font-size: 24px;
+  font-size: 22px;
+}
+
+body .wrapper header#banner div.gauge {
+  height: 2px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 10%;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  background-color: #FFB800;
 }
 
 body .wrapper div.content_wrapper {
@@ -111,7 +130,7 @@ body .wrapper div.content_wrapper div.discription {
           flex-direction: column;
 }
 
-body .wrapper div.content_wrapper div.discription > p {
+body .wrapper div.content_wrapper div.discription p.text {
   margin-top: 30px;
   text-align: center;
   width: 220px;
@@ -137,6 +156,13 @@ body .wrapper div.content_wrapper div.discription div.button_wrapper button {
   font-family: "Roboto";
   font-weight: 700;
   color: #FFFFFF;
+  -webkit-box-shadow: 0 2px 2px #C4C4C4;
+          box-shadow: 0 2px 2px #C4C4C4;
+}
+
+body .wrapper div.content_wrapper div.discription div.button_wrapper button:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 body .wrapper div.content_wrapper div.discription div.button_wrapper button:hover {

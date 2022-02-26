@@ -87,8 +87,7 @@ body {
           ul.content_wrapper {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            
-            transition: all 0.5s;
+            transition-duration: 0.5s;
 
             img {
                 width: 180px;
