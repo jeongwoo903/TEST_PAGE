@@ -37,7 +37,7 @@ btn_down.addEventListener("click", () => {
 if (page_value == 0) btn_back.style.visibility = "hidden";
 
 btn_back.addEventListener("click", () => {
-    if (page_value == 432) btn_back.style.visibility = "hidden";
+    if (page_value == ulElem.childNodes[1].clientWidth) btn_back.style.visibility = "hidden";
 
     page_value -= page_width;
     ulElem.style.transform = `translate(-${page_value}px)`;

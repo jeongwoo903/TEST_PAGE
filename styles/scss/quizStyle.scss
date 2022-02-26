@@ -14,7 +14,6 @@ body {
     font-family: "Roboto" !important;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
     
     .wrapper {
         display: flex;
@@ -23,7 +22,6 @@ body {
         width: 27rem;
         height: 98.8vh;
         border: 5px solid $MAIN_BLUE;
-        overflow: hidden;
 
       @media (min-height: 800px) {
         height: 758px;
@@ -64,63 +62,78 @@ body {
         }
       }
 
-      ul.content_wrapper {
-        list-style: none;
-        height: 100%;
-        display: grid;
-        grid-template-columns: repeat(10,1fr);
-        
-        .page {
-            list-style: none;
-            padding: 99px 66px;
-            div.img_wrapper {
-                width: 300px;
-                min-height: 300px;
-                border-radius: 15px;
-                box-shadow: 0px 4px 4px $SHADOW_COLOR;
-              }
-    
-              div.discription {
-                  height: 12.5rem;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  flex-direction: column;
-                  p.text {
-                      margin-top: 30px;
-                      text-align: center;
-                      width: 220px;
-                      font-size: 1.2rem;
-                      font-weight: 700;
+      div.container {
+          @include flex-center;
+          height: 100%;
+
+          div.frame {
+            width: 302px;
+            height: 508px;
+            overflow: hidden;
+
+            ul.content_wrapper {
+                display: grid;
+                grid-template-columns: repeat(10, 1fr);
+              
+              .page {
+                  list-style: none;
+      
+                  div.img_wrapper {
+                      width: inherit;
+                      display: flex;
+                      justify-content: center;
+      
+                      img {
+                          width: 300px;
+                          min-height: 300px;
+                          border-radius: 15px;
+                          border: 1px solid $MAIN_BLUE ;
+                      }
                   }
-                  div.button_wrapper {
-                      display: grid;
-                      grid-template-rows: 1fr 1fr;
-    
-                      button {
-                          margin-top: 20px;
-                          border: none;
-                          outline: none;
-                          background-color: $MAIN_BLUE;
-                          width: 200px;
-                          height: 45px;
-                          border-radius: 25px;
-                          font-family: "Roboto";
-                          font-weight: 700;
-                          color: #FFFFFF;
-                          box-shadow: 0 2px 2px $SHADOW_COLOR;
-    
-                          &:active {
-                            transform: translateY(2px);
-                          }
-                          
-                          &:hover {
-                              background-color: lighten($MAIN_BLUE, 10%);
-                            }
+          
+                    div.discription {
+                        height: 12.5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        p.text {
+                            margin-top: 30px;
+                            text-align: center;
+                            width: 220px;
+                            font-size: 1.2rem;
+                            font-weight: 700;
                         }
-                    }
+                        div.button_wrapper {
+                            display: grid;
+                            grid-template-rows: 1fr 1fr;
+          
+                            button {
+                                margin-top: 20px;
+                                border: none;
+                                outline: none;
+                                background-color: $MAIN_BLUE;
+                                width: 200px;
+                                height: 45px;
+                                border-radius: 25px;
+                                font-family: "Roboto";
+                                font-weight: 700;
+                                color: #FFFFFF;
+                                box-shadow: 0 2px 2px $SHADOW_COLOR;
+          
+                                &:active {
+                                  transform: translateY(2px);
+                                }
+                                
+                                &:hover {
+                                    background-color: lighten($MAIN_BLUE, 10%);
+                                  }
+                              }
+                          }
+                      }
+                  }
                 }
-        }
-        }
+          }
+      }
     }
 }
