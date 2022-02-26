@@ -42,7 +42,11 @@ body {
             }
         }
         h1 {
-            font-size: 22px;
+            font-size: 20px;
+
+            @media (min-width: 400px) {
+                font-size: 22px;
+              }
         }
         div.gauge {
             height:2px;
@@ -58,8 +62,8 @@ body {
           @include flex-center;
           height: 100%;
           div.frame {
-            width: 302px;
-            height: 508px;
+            width: 306px;
+            height: 518px;
             overflow: hidden;
             ul.content_wrapper {
                 display: grid;
@@ -77,7 +81,8 @@ body {
                           width: 300px;
                           min-height: 300px;
                           border-radius: 15px;
-                          border: 1px solid $MAIN_BLUE ;
+                          border: 3px solid $MAIN_BLUE ;
+                          box-shadow: 0 3px 2px rgba($color: #7e7e7e, $alpha: .3);
                       }
                   }
           
@@ -85,7 +90,6 @@ body {
                         height: 12.5rem;
                         display: flex;
                         align-items: center;
-                        justify-content: center;
                         flex-direction: column;
                         p.text {
                             margin-top: 30px;
