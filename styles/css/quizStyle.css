@@ -28,9 +28,6 @@ body .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -41,6 +38,7 @@ body .wrapper {
   width: 27rem;
   height: 98.8vh;
   border: 5px solid #0E4A84;
+  overflow: hidden;
 }
 
 @media (min-height: 800px) {
@@ -91,21 +89,21 @@ body .wrapper header#banner div.gauge {
   background-color: #FFB800;
 }
 
-body .wrapper div.content_wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+body .wrapper ul.content_wrapper {
+  list-style: none;
   height: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
 }
 
-body .wrapper div.content_wrapper div.img_wrapper {
+body .wrapper ul.content_wrapper .page {
+  list-style: none;
+  margin: 99px 66px;
+}
+
+body .wrapper ul.content_wrapper .page div.img_wrapper {
   width: 300px;
   min-height: 300px;
   border-radius: 15px;
@@ -113,7 +111,7 @@ body .wrapper div.content_wrapper div.img_wrapper {
           box-shadow: 0px 4px 4px #C4C4C4;
 }
 
-body .wrapper div.content_wrapper div.discription {
+body .wrapper ul.content_wrapper .page div.discription {
   height: 12.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -130,7 +128,7 @@ body .wrapper div.content_wrapper div.discription {
           flex-direction: column;
 }
 
-body .wrapper div.content_wrapper div.discription p.text {
+body .wrapper ul.content_wrapper .page div.discription p.text {
   margin-top: 30px;
   text-align: center;
   width: 220px;
@@ -138,14 +136,14 @@ body .wrapper div.content_wrapper div.discription p.text {
   font-weight: 700;
 }
 
-body .wrapper div.content_wrapper div.discription div.button_wrapper {
+body .wrapper ul.content_wrapper .page div.discription div.button_wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
 }
 
-body .wrapper div.content_wrapper div.discription div.button_wrapper button {
+body .wrapper ul.content_wrapper .page div.discription div.button_wrapper button {
   margin-top: 20px;
   border: none;
   outline: none;
@@ -160,12 +158,12 @@ body .wrapper div.content_wrapper div.discription div.button_wrapper button {
           box-shadow: 0 2px 2px #C4C4C4;
 }
 
-body .wrapper div.content_wrapper div.discription div.button_wrapper button:active {
+body .wrapper ul.content_wrapper .page div.discription div.button_wrapper button:active {
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
 }
 
-body .wrapper div.content_wrapper div.discription div.button_wrapper button:hover {
+body .wrapper ul.content_wrapper .page div.discription div.button_wrapper button:hover {
   background-color: #1364b2;
 }
 /*# sourceMappingURL=quizStyle.css.map */

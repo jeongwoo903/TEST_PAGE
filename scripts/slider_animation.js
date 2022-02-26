@@ -7,5 +7,4 @@
         else pxValue += 180;
         ulElem.style.transform = `translate(-${pxValue}px)`;
     }, 1500);
-
 })();
