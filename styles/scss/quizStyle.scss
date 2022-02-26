@@ -17,9 +17,7 @@ body {
     overflow: hidden;
     
     .wrapper {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
+        @include flex-center;
         width: 27rem;
         height: 98.8vh;
         border: 5px solid $MAIN_BLUE;
