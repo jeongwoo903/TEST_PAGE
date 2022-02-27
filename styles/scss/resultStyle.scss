@@ -1,0 +1,30 @@
+@import "common";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $BG_COLOR;
+}
+
+body {
+    @include flex-center;
+    font-family: "Roboto" !important;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    
+    .wrapper {
+      @include flex-center;
+      flex-direction: column;
+      width: 27rem;
+      height: 98.8vh;
+      border: 5px solid $MAIN_BLUE;
+
+      @media (min-height: 800px) {
+        height: 758px;
+      }
+    }
+}
