@@ -29,7 +29,7 @@ body {
         width: 100%;
         min-height: 60px;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
         box-shadow: 0px 2px 0px $SHADOW_COLOR;
         position: relative;
         button {
@@ -42,12 +42,19 @@ body {
             }
         }
         h1 {
-            font-size: 20px;
-
+            font-size: 18px;
             @media (min-width: 400px) {
                 font-size: 22px;
-              }
+            }
         }
+
+        p.count, button.back {
+            font-size: 14;
+            @media (min-width: 400px) {
+                font-size: 16px;
+            }
+        }
+
         div.gauge {
             height:2px;
             position: absolute;
@@ -71,6 +78,11 @@ body {
               
               .page {
                   list-style: none;
+                  display: none;
+                  &.show {
+                    display: block;
+                  }
+                }
       
                   div.img_wrapper {
                       width: inherit;
@@ -114,6 +126,17 @@ body {
                                 font-weight: 700;
                                 color: #FFFFFF;
                                 box-shadow: 0 2px 2px $SHADOW_COLOR;
+
+                                &.check {
+                                    color: $MAIN_BLUE;
+                                    background-color: #FFFFFF;
+                                    border: 2px solid $MAIN_BLUE;
+
+                                    &:hover {
+                                        color: #FFFFFF;
+                                        background-color: lighten($MAIN_BLUE, 10%);
+                                    }
+                                }
           
                                 &:active {
                                   transform: translateY(2px);
@@ -129,5 +152,4 @@ body {
                 }
           }
       }
-    }
 }
