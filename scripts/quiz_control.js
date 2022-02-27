@@ -27,29 +27,27 @@ function btnControl(e) {
     console.log(count);
     let currentItem = document.querySelector(`.page${count}.check`);
 
-    console.log(currentItem);
-    // 이전 퀴즈 감추기
-    ulElem.childNodes[count - 1].classList.remove("show");
-    // 카운터 증가
-    count++;
-    counter.innerHTML = `${count}/10`;
-    setPage();
-    // btn_wrapper의 재 정의 -> 다음 page의 addEventListener가 적용이 안됨.
-    // btn_wrapper = document.querySelector(`li:nth-child(${count}) .button_wrapper`);
-    // 다음 퀴즈 보여주기
-    if (count < quiz_data.length + 1) {
-        ulElem.childNodes[count - 1].classList.add("show");
-    } else {
-
-        window.location.href = "index.html"
-    }
-
     // 선택지 다시 고르기
     if (currentItem) {
         currentItem.classList.remove("check");
     }
-    // 선택지 고르기
+    // 선택지 고르기 -> 여기 부분 수정 page 값 가지도록 영역 수정
     if (tg.classList.contains("btn")) {
+        // 이전 퀴즈 감추기
+        ulElem.childNodes[count - 1].classList.remove("show");
+        // 카운터 증가
+        count++;
+        counter.innerHTML = `${count}/10`;
+        setPage();
+        // btn_wrapper의 재 정의 -> 다음 page의 addEventListener가 적용이 안됨.
+        // btn_wrapper = document.querySelector(`li:nth-child(${count}) .button_wrapper`);
+        // 다음 퀴즈 보여주기
+        if (count < quiz_data.length + 1) {
+            ulElem.childNodes[count - 1].classList.add("show");
+        } else {
+            window.location.href = "index.html"
+        }
+
         tg.classList.add("check");
     }
     // 이전 버튼 표시
