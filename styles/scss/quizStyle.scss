@@ -55,6 +55,10 @@ body {
             }
         }
 
+        button.back {
+            visibility: hidden;
+        }
+
         div.gauge {
             height:2px;
             position: absolute;

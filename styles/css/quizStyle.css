@@ -101,6 +101,10 @@ body .wrapper header#banner p.count, body .wrapper header#banner button.back {
   }
 }
 
+body .wrapper header#banner button.back {
+  visibility: hidden;
+}
+
 body .wrapper header#banner div.gauge {
   height: 2px;
   position: absolute;
