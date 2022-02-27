@@ -35,7 +35,7 @@ body {
         button {
             outline: none;
             border: none;
-            background-color: #FFFFFF;
+            background-color: $BG_COLOR;
             font-size: 14px;
             &:hover {
                 color: darken($BG_COLOR, 50%);
@@ -64,7 +64,7 @@ body {
             position: absolute;
             top: 60px;
             left: 0;
-            width: 10%;
+            width: 0%;
             transition: all .5s;
             background-color: $MAIN_YELLOW;
         }
@@ -128,16 +128,16 @@ body {
                                 border-radius: 25px;
                                 font-family: "Roboto";
                                 font-weight: 700;
-                                color: #FFFFFF;
+                                color: $BG_COLOR;
                                 box-shadow: 0 2px 2px $SHADOW_COLOR;
 
                                 &.check {
                                     color: $MAIN_BLUE;
-                                    background-color: #FFFFFF;
+                                    background-color: $BG_COLOR;
                                     border: 2px solid $MAIN_BLUE;
 
                                     &:hover {
-                                        color: #FFFFFF;
+                                        color: $BG_COLOR;
                                         background-color: lighten($MAIN_BLUE, 10%);
                                     }
                                 }

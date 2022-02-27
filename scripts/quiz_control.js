@@ -9,9 +9,11 @@ const btn_back = document.querySelector("button.back");
 // 페이지 수 세기 -> 1이하가 안되게끔..
 let count = 1;
 const counter = document.querySelector("p.count");
+counter.innerHTML = `${count}/${quiz_data.length}`;
 // 페이지 게이지
-let gauge = 10;
+let gauge = 0;
 const gaugebar = document.querySelector("div.gauge");
+gaugebar.style.width = `${gauge += 100 / quiz_data.length}%`;
 
 function setPage() {
     let parentBtn = btn_wrapper[count - 1];
@@ -37,7 +39,7 @@ function btnControl(e) {
         ulElem.childNodes[count - 1].classList.remove("show");
         // 카운터 증가
         count++;
-        counter.innerHTML = `${count}/10`;
+        counter.innerHTML = `${count}/${quiz_data.length}`;
         setPage();
         // btn_wrapper의 재 정의 -> 다음 page의 addEventListener가 적용이 안됨.
         // btn_wrapper = document.querySelector(`li:nth-child(${count}) .button_wrapper`);
@@ -53,7 +55,7 @@ function btnControl(e) {
     // 이전 버튼 표시
     btn_back.style.visibility = "visible";
     // 게이지 바 증가
-    gaugebar.style.width = `${gauge += 10}%`;
+    gaugebar.style.width = `${gauge += 100 / quiz_data.length}%`;
 }
 
 // 버튼 상호작용 (체크된 버튼 / 게이지바 / 페리지 카운트)
@@ -64,12 +66,13 @@ for (const btnElem of btn_wrapper) {
 
 btn_back.addEventListener("click", () => {
     count--;
-    counter.innerHTML = `${count}/10`;
+    counter.innerHTML = `${count}/${quiz_data.length}`;
     ulElem.childNodes[count - 1].classList.add("show");
 
     if (count == 1) {
         btn_back.style.visibility = "hidden";
     }
 
-    gaugebar.style.width = `${gauge -= 10}%`;
+    gaugebar.style.width = `${gauge -= 100 / quiz_data.length}%`;
 });
+
