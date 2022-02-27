@@ -65,9 +65,11 @@ for (const btnElem of btn_wrapper) {
 }
 
 btn_back.addEventListener("click", () => {
+    ulElem.childNodes[count - 1].classList.remove("show");
     count--;
     counter.innerHTML = `${count}/${quiz_data.length}`;
     ulElem.childNodes[count - 1].classList.add("show");
+
 
     if (count == 1) {
         btn_back.style.visibility = "hidden";
