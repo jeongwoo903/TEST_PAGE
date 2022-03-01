@@ -109,12 +109,12 @@ body {
                         align-items: center;
                         flex-direction: column;
                         p.text {
+                            font-family: 'SuncheonB' !important;
                             margin-top: 30px;
                             text-align: center;
                             line-height: 24px;
-                            width: 220px;
+                            width: 230px;
                             font-size: 1.2rem;
-                            font-weight: 700;
                         }
                         div.button_wrapper {
                             display: grid;

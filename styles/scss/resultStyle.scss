@@ -12,7 +12,6 @@ body {
 body {
     @include flex-center;
     font-family: 'SuncheonB' !important;
-    font-weight: 100;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -31,7 +30,6 @@ body {
       }
 
       div.mbti_wrapper {
-        font-weight: 800;
         position: relative;
 
         p.mbti_ment {
