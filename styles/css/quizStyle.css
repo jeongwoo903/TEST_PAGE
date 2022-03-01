@@ -189,14 +189,13 @@ body .wrapper div.container div.frame ul.content_wrapper div.discription {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: 'SuncheonB' !important;
 }
 
 body .wrapper div.container div.frame ul.content_wrapper div.discription p.text {
   margin-top: 30px;
   text-align: center;
   line-height: 24px;
-  width: 230px;
+  width: 220px;
   font-size: 1.2rem;
   font-weight: 700;
 }
