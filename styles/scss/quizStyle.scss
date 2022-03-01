@@ -1,4 +1,5 @@
 @import "common";
+
 * {
     margin: 0;
     padding: 0;
@@ -107,10 +108,12 @@ body {
                         display: flex;
                         align-items: center;
                         flex-direction: column;
+                        font-family: 'SuncheonB' !important;
                         p.text {
                             margin-top: 30px;
                             text-align: center;
-                            width: 220px;
+                            line-height: 24px;
+                            width: 230px;
                             font-size: 1.2rem;
                             font-weight: 700;
                         }
@@ -119,6 +122,7 @@ body {
                             grid-template-rows: 1fr 1fr;
           
                             button {
+                                font-family: 'SuncheonB' !important;
                                 margin-top: 20px;
                                 border: none;
                                 outline: none;
@@ -126,8 +130,6 @@ body {
                                 width: 200px;
                                 height: 45px;
                                 border-radius: 25px;
-                                font-family: "Roboto";
-                                font-weight: 700;
                                 color: $BG_COLOR;
                                 box-shadow: 0 2px 2px $SHADOW_COLOR;
 

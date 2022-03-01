@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@font-face {
+  font-family: 'SuncheonB';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/SuncheonB.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +25,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Roboto" !important;
+  font-family: 'SuncheonB' !important;
+  font-weight: 100;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -28,9 +36,6 @@ body .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -41,11 +46,104 @@ body .wrapper {
   width: 27rem;
   height: 98.8vh;
   border: 5px solid #0E4A84;
+  overflow: scroll;
 }
 
 @media (min-height: 800px) {
   body .wrapper {
     height: 758px;
   }
+}
+
+body .wrapper div.mbti_wrapper {
+  font-weight: 800;
+  position: relative;
+}
+
+body .wrapper div.mbti_wrapper p.mbti_ment {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 16px;
+  color: #0E4A84;
+}
+
+body .wrapper div.mbti_wrapper svg {
+  z-index: -1;
+  position: absolute;
+  top: 79px;
+  left: -7px;
+}
+
+body .wrapper div.mbti_wrapper p.mbti_result {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 22px;
+  line-height: 34px;
+}
+
+body .wrapper div.course_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+body .wrapper div.course_wrapper h1.course {
+  margin: 35px 0;
+  color: #FFFFFF;
+}
+
+body .wrapper div.course_wrapper svg {
+  position: absolute;
+  top: 19px;
+  left: -17px;
+  z-index: -1;
+  -webkit-filter: drop-shadow(0px 3px 3px #C4C4C4);
+          filter: drop-shadow(0px 3px 3px #C4C4C4);
+}
+
+body .wrapper div.course_wrapper img.course_img {
+  width: 210px;
+  height: 210px;
+  -webkit-filter: drop-shadow(0px 3px 3px #C4C4C4);
+          filter: drop-shadow(0px 3px 3px #C4C4C4);
+}
+
+body .wrapper button.return {
+  font-family: 'SuncheonB' !important;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  background-color: #0E4A84;
+  width: 200px;
+  height: 45px;
+  border-radius: 25px;
+  color: #FFFFFF;
+  -webkit-box-shadow: 0 2px 2px #C4C4C4;
+          box-shadow: 0 2px 2px #C4C4C4;
+}
+
+body .wrapper button.return:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+body .wrapper button.return:hover {
+  background-color: #1364b2;
+}
+
+body .wrapper p.not_yet {
+  color: #0E4A84;
+}
+
+body .wrapper p.script {
+  margin-top: 10px;
 }
 /*# sourceMappingURL=resultStyle.css.map */

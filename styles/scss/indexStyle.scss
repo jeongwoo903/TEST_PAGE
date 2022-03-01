@@ -11,7 +11,6 @@ body {
 
 body {
     @include flex-center;
-    font-family: "Roboto" !important;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -30,6 +29,7 @@ body {
       
       header.title {
         position: relative;
+        font-family: "Roboto" !important;
   
         p {
           display: inline;
@@ -101,6 +101,7 @@ body {
         position: relative;
         @include flex-center;
         flex-direction: column;
+        font-family: "SuncheonB" !important;
   
         @import "button";
       }

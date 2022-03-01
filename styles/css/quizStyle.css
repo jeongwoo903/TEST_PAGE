@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@font-face {
+  font-family: 'SuncheonB';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/SuncheonB.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -182,12 +189,14 @@ body .wrapper div.container div.frame ul.content_wrapper div.discription {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: 'SuncheonB' !important;
 }
 
 body .wrapper div.container div.frame ul.content_wrapper div.discription p.text {
   margin-top: 30px;
   text-align: center;
-  width: 220px;
+  line-height: 24px;
+  width: 230px;
   font-size: 1.2rem;
   font-weight: 700;
 }
@@ -200,6 +209,7 @@ body .wrapper div.container div.frame ul.content_wrapper div.discription div.but
 }
 
 body .wrapper div.container div.frame ul.content_wrapper div.discription div.button_wrapper button {
+  font-family: 'SuncheonB' !important;
   margin-top: 20px;
   border: none;
   outline: none;
@@ -207,8 +217,6 @@ body .wrapper div.container div.frame ul.content_wrapper div.discription div.but
   width: 200px;
   height: 45px;
   border-radius: 25px;
-  font-family: "Roboto";
-  font-weight: 700;
   color: #FFFFFF;
   -webkit-box-shadow: 0 2px 2px #C4C4C4;
           box-shadow: 0 2px 2px #C4C4C4;
