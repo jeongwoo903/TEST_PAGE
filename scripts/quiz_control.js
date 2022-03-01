@@ -44,7 +44,9 @@ function btnControl(e) {
     // 선택지 고르기 -> 여기 부분 수정 page 값 가지도록 영역 수정
     if (tg.classList.contains("btn")) {
         // 이전 퀴즈 감추기
-        ulElem.childNodes[count - 1].classList.remove("show");
+        console.log(`${count} / ${quiz_data.length}`);
+        (count < quiz_data.length) ? ulElem.childNodes[count - 1].classList.remove("show") : false;
+        // ulElem.childNodes[count - 1].classList.remove("show");
 
         // 선택지별 MBTI 가져오기
         (tg.classList.contains("up")) ?
@@ -54,14 +56,24 @@ function btnControl(e) {
 
         // 카운터 증가
         count++;
-        counter.innerHTML = `${count}/${quiz_data.length}`;
-        setPage();
 
+        // 게이지 바 증가
+        (count < quiz_data.length + 1) ? gaugebar.style.width = `${gauge += 100 / quiz_data.length}%` : false;
+
+        //타겟 check 클래스 부여
+        tg.classList.add("check");
+
+        // 서순 지키기.. ->마지막 페이지일때 버튼에 check을 부여하고 나서 결과 페이지로 
         // btn_wrapper의 재 정의 -> 다음 page의 addEventListener가 적용이 안됨.
         // btn_wrapper = document.querySelector(`li:nth-child(${count}) .button_wrapper`);
         // 다음 퀴즈 보여주기
         if (count < quiz_data.length + 1) {
+            // 마지막 페이지에서 결과페이지로 count 증가없이 넘기기 위함.
+            counter.innerHTML = `${count}/${quiz_data.length}`;
+            setPage();
+
             ulElem.childNodes[count - 1].classList.add("show");
+
         } else {
             for (let value in mbtiData) {
                 if (mbtiData[value] >= 2) {
@@ -73,12 +85,6 @@ function btnControl(e) {
 
             window.location.href = "result.html#" + mbti;
         }
-
-        // 게이지 바 증가
-        gaugebar.style.width = `${gauge += 100 / quiz_data.length}%`;
-
-        //타겟 check 클래스 부여
-        tg.classList.add("check");
     }
     // 이전 버튼 표시
     btn_back.style.visibility = "visible";
